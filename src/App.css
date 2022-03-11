@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar&family=Poppins:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  padding: 20px 0;
+}
+
+.navbar h1 {
+  display: inline;
+  font-family: "poppins";
+  font-size: 3rem;
+  background: linear-gradient(to right, red, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.main .main_text {
+  flex-grow: 1;
+  font-family: "poppins";
+  font-weight: 600;
+  font-size: 2rem;
+  color: lavender;
+}
+
+#hi {
+  font-size: 3rem;
+}
+
+#backend {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, red, lavender);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: font-size ease-in-out 1s;
+}
+
+#frontend {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, blue, #333);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main img {
+  flex-grow: 1;
+  width: 19%;
+  min-width: 50%;
+  object-fit: contain;
+}
+
+.skills {
+  padding: 50px 0;
+}
+
+.skills h3 {
+  color: lavender;
+  font-family: "poppins";
+  margin-bottom: 20px;
+}
+
+.languages_group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.languages_group a {
+  text-decoration: none;
+}
+
+.language {
+  padding: 15px;
+  border-radius: 10px;
+  border: solid 1px;
+  border: none;
+}
+
+.language p {
+  font-family: "poppins";
+  text-decoration: none;
+}
+
+.bar {
+  position: relative;
+  border-radius: 1rem;
+  margin-top: 5px;
+  width: 100%;
+  height: 10px;
+  background-color: rgb(24, 21, 21);
+}
+
+.indicator {
+  position: absolute;
+  border-radius: 1rem;
+  height: 100%;
+}
+
+.frameworks {
+  padding: 50px 0;
+}
+
+.frameworks h3 {
+  color: lavender;
+  font-family: 'poppins';
+  margin-bottom: 20px;
+}
+
+.frameworks_group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.framework_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* box-shadow: 0px 0px 20px 0.5px rgb(154, 65, 255);
+  border-radius: 1rem; */
 }
 
-.App-link {
-  color: #61dafb;
+.framework {
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* box-shadow: 0px 0px 20px 0.5px rgb(255, 125, 65); */
+  box-shadow: 0px 0px 20px 0.5px rgb(102, 156, 255);
+  border-radius: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.framework img {
+  width: 70%;
+  height: auto;
+}
+
+.framework .name {
+  color: lavender;
+  font-family: 'poppins';
+  font-size: 1.5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .main .main_text {
+    text-align: center;
+  }
+  
+  .main img {
+    margin-top: 50px;
+    width: 90%;
+  }
+  
+  .languages_group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .frameworks_group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .framework img {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .languages_group {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .frameworks_group {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .framework {
+    width: 100%;
+  }
+
+  .framework img {
+    width: 40%;
   }
 }
