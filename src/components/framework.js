@@ -36,7 +36,7 @@ function Framework() {
             }}
           >
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phoenix/phoenix-original.svg" />
-            <p className="name">React js</p>
+            <p className="name">Phoenix</p>
           </motion.div>
         </div>
 
@@ -53,7 +53,7 @@ function Framework() {
             }}
           >
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
-            <p className="name">React js</p>
+            <p className="name">Postgresql</p>
           </motion.div>
         </div>
       </div>
