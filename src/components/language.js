@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 function Language({ language, bg, percent, delay }) {
-  const [state, setState] = useState(percent)
+  const [state, setState] = useState(percent);
 
   useEffect(() => {
     let interval = setInterval(() => {
@@ -17,20 +17,23 @@ function Language({ language, bg, percent, delay }) {
     <div className="language_container">
       <motion.div
         className="language"
-        style={{ boxShadow: `0px 0px 20px 0.5px ${bg} inset`}}
+        style={{ boxShadow: `0px 0px 20px 0.5px ${bg} inset` }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: delay }}
       >
-        <p style={{ color: bg }}>{language}</p>
+        <p style={{ color: bg }}>
+          {language} <span>{percent}%</span>
+        </p>
         <div className="bar">
-          <motion.div 
+          <motion.div
             className="indicator"
-            style={{ backgroundColor: bg, width: `${state}%` }}
-            animate={{width: state}}
-            transition={{duration: 1}}
-          ></motion.div>
+            style={{ backgroundColor: bg, width: `${state}%`}}
+            animate={{ width: `${state}%` }}
+            transition={{ duration: 1 }}
+          >
+          </motion.div>
         </div>
       </motion.div>
     </div>

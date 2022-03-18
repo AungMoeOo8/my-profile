@@ -6,8 +6,35 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: black;
+/* body {
+  background-image: radial-gradient(  rgb(20, 45, 65), black);
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+} */
+
+#root {
+  position: absolute;
+  background-image: radial-gradient(  rgb(20, 45, 65), black);
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  /* overflow: scroll; */
+  overflow-x: hidden;
+}
+
+.fancy {
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  right: 40%;
+  width: 10%;
+  max-width: 70px;
+  height: auto;
+  z-index: -1;
+  /* filter: blur(1px); */
+  border-radius: 100%;
 }
 
 .container {
@@ -18,6 +45,9 @@ body {
 
 .navbar {
   padding: 20px 0;
+  /* position: sticky;
+  top: 0px;
+  z-index: 1000; */
 }
 
 .navbar h1 {
@@ -58,8 +88,9 @@ body {
 }
 
 #frontend {
+  display: inline-block;
   font-size: 2.5rem;
-  background: linear-gradient(to right, blue, #333);
+  background: linear-gradient(to right, blue, lavender);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -79,7 +110,14 @@ body {
 .skills h3 {
   color: lavender;
   font-family: "poppins";
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+}
+
+.skills .fun_btn {
+  font-family: 'poppins';
+  color: lavender;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .languages_group {
@@ -139,8 +177,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* box-shadow: 0px 0px 20px 0.5px rgb(154, 65, 255);
-  border-radius: 1rem; */
 }
 
 .framework {
@@ -149,8 +185,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* box-shadow: 0px 0px 20px 0.5px rgb(255, 125, 65); */
-  box-shadow: 0px 0px 20px 0.5px rgb(102, 156, 255);
+  /* box-shadow: 0px 0px 20px 0.5px rgb(102, 156, 255) inset; */
   border-radius: 1rem;
 }
 
@@ -165,6 +200,14 @@ body {
   font-size: 1.5rem;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  color: aliceblue;
+  font-family: 'poppins';
+  font-weight: 600;
+}
 
 @media screen and (max-width: 768px) {
   .main {

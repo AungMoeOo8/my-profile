@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function Framework() {
   return (
     <div className="frameworks">
-      <h3>Full-Stacks</h3>
+      <h3>My Favourite Stack</h3>
       <div className="frameworks_group">
         <div className="framework_container">
           <motion.div
@@ -15,7 +15,7 @@ function Framework() {
             transition={{ duration: 0.3 }}
             whileHover={{
               scale: 1.05,
-              boxShadow: "0px 0px 20px 0.5px rgb(255, 125, 65) inset",
+              boxShadow: '0px 0px 20px 0.5px rgb(102, 156, 255) inset',
             }}
           >
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
@@ -32,7 +32,7 @@ function Framework() {
             transition={{ duration: 0.3 }}
             whileHover={{
               scale: 1.05,
-              boxShadow: "0px 0px 20px 0.5px rgb(255, 125, 65) inset",
+              boxShadow: '0px 0px 20px 0.5px rgb(102, 156, 255) inset',
             }}
           >
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phoenix/phoenix-original.svg" />
@@ -49,7 +49,7 @@ function Framework() {
             transition={{ duration: 0.3 }}
             whileHover={{
               scale: 1.05,
-              boxShadow: "0px 0px 20px 0.5px rgb(255, 125, 65) inset",
+              boxShadow: '0px 0px 20px 0.5px rgb(102, 156, 255) inset',
             }}
           >
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
