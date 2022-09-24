@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title x-data x-text="$store.title.getTitle()"></title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- <div class="container">
+      <div>
+        <a><span class="logo">ME</span></a>
+        <button x-data @click="$store.title.change()">Button</button>
+      </div>
+    </div> -->
+
+    <div class="language_divider">
+      <div class="language" data-language="php">
+        <div class="language-btn">
+          <img src="https://www.svgrepo.com/show/373970/php3.svg" />
+        </div>
+        <div class="background-text">PHP</div>
+      </div>
+      <hr />
+      <div class="language" data-language="node">
+        <div class="language-btn">
+          <img src="https://www.svgrepo.com/show/303266/nodejs-icon-logo.svg" />
+        </div>
+        <div class="background-text">Node</div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
