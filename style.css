@@ -36,6 +36,7 @@ body {
     var(--color-node),
     var(--color-php) 100%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -99,6 +100,7 @@ body {
 .language-btn > img {
   width: 60px;
   height: 60px;
+  user-select: none;
 }
 
 .language[data-language="php"] > .language-btn {
