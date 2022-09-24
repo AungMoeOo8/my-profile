@@ -1,16 +1,14 @@
-let languageBtn = document.querySelectorAll(".language-btn");
-
-let chosenLanguage;
+const languageBtn = document.querySelectorAll(".language-btn");
+const langaugeDivider = document.querySelector(".language-divider");
+const arrowDown = document.querySelector(".arrow-down");
 
 languageBtn.forEach((btn) => {
-  btn.addEventListener("click", () => {
+  btn.onclick = () => {
     // chosenLanguage = btn.parentElement.dataset.language;
     // console.log(chosenLanguage);
     location.assign("/" + btn.parentElement.dataset.language + ".html");
-  });
+  };
 });
-
-console.log("default: " + chosenLanguage);
 
 document.addEventListener("alpine:init", () => {
   Alpine.store("title", {
@@ -23,3 +21,22 @@ document.addEventListener("alpine:init", () => {
     },
   });
 });
+
+langaugeDivider.onscroll = () => {
+  if (langaugeDivider.scrollTop === 0) {
+    arrowDown.classList.remove("rotate");
+  } else if (
+    langaugeDivider.scrollTop * 2 - 2 ===
+    langaugeDivider.scrollHeight
+  ) {
+    arrowDown.classList.add("rotate");
+  }
+};
+
+arrowDown.onclick = () => {
+  if (langaugeDivider.scrollTop === 0) {
+    langaugeDivider.scrollTop = langaugeDivider.scrollHeight / 1.5;
+    return;
+  }
+  langaugeDivider.scrollTop = 0;
+};

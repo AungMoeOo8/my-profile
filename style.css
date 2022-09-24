@@ -41,12 +41,13 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.language_divider {
+.language-divider {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: space-between;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 .language {
@@ -87,7 +88,7 @@ body {
   padding: calc(50px);
   border-radius: 10px;
   transition: box-shadow ease-in 300ms;
-  animation: rotate-in 2s;
+  /* animation: rotate-in 2s; */
   z-index: 10;
   backdrop-filter: blur(8px);
 }
@@ -104,7 +105,6 @@ body {
 }
 
 .language[data-language="php"] > .language-btn {
-  /* border: solid var(--color-php) 1px; */
   box-shadow: 0px 0px 150px 10px var(--color-php);
 }
 
@@ -117,7 +117,6 @@ body {
 }
 
 .language[data-language="node"] > .language-btn {
-  /* border: solid var(--color-node) 1px; */
   box-shadow: 0px 0px 150px 5px var(--color-node);
 }
 
@@ -129,14 +128,43 @@ body {
   color: var(--color-node);
 }
 
+.arrow-down {
+  display: none;
+  width: 70px;
+  height: auto;
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  animation: bounce 1.5s infinite alternate;
+  transition: transform 250ms;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.helper-text {
+  width: 200px;
+  text-align: center;
+  position: fixed;
+  top: 15%;
+  left: calc(50% - 100px);
+}
+
+.helper-text > p {
+  display: inline;
+}
+
 @media screen and (max-width: 596.5px) {
-  .language_divider {
+  .language-divider {
     scroll-snap-type: y mandatory;
     flex-direction: column;
   }
 
   .language {
     flex-shrink: 0;
+  }
+
+  .arrow-down {
+    display: block;
   }
 }
 
@@ -153,6 +181,11 @@ hr {
   max-width: 1024px;
 }
 
+.rotate {
+  transform: rotate(180deg);
+  stroke: var(--color-node);
+}
+
 /*---------- keyframes--------- */
 
 @keyframes rotate-in {
@@ -163,5 +196,15 @@ hr {
   100% {
     rotate: 360deg;
     scale: 100%;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    translate: 0px -20px;
+  }
+
+  100% {
+    translate: 0px 0px;
   }
 }
