@@ -4,9 +4,7 @@ const arrowDown = document.querySelector(".arrow-down");
 
 languageBtn.forEach((btn) => {
   btn.onclick = () => {
-    // chosenLanguage = btn.parentElement.dataset.language;
-    // console.log(chosenLanguage);
-    location.assign("/" + btn.parentElement.dataset.language + ".html");
+    location.assign("./" + btn.parentElement.dataset.language + ".html");
   };
 });
 

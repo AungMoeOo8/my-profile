@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aung Moe Oo's Profile | PHP</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="php.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,11 +16,12 @@
   </head>
   <body>
     <div class="container">
-      <div>
-        <a><span class="logo">ME</span></a>
-        <button x-data @click="$store.title.change()">Button</button>
+      <div class="navbar">
+        <a href=""><span class="logo">ME</span></a>
+        <a class="back-btn">Go back</a>
       </div>
+      <main>Hi, I am a web developer</main>
     </div>
-    <script src="index.js"></script>
+    <script src="php.js"></script>
   </body>
 </html>
